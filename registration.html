@@ -31,7 +31,7 @@
 									<div class="text d-none d-md-flex registration__header-text">
 										Уже есть аккаунт?
 									</div>
-									<a href="#" class="button registration__header-button" data-bs-toggle="modal" data-bs-target="#modal-login">
+									<a href="#" class="button button--contour registration__header-button" data-bs-toggle="modal" data-bs-target="#modal-login">
 										<span class="button__text">
 											Вход
 										</span>
@@ -55,13 +55,31 @@
 											Регистрация
 										</div>
 										<div class="input registration__input">
-											<input type="text" class="input__field jsInput jsInputReq" placeholder="Введите email" name="email">
+											<input type="text" class="input__field jsInput jsInputReq" name="email">
+											<span class="input__label">
+												Введите email
+											</span>
+											<span class="input__error">
+												Ошибка
+											</span>
 										</div>
 										<div class="input registration__input">
-											<input type="text" class="input__field jsInput jsPhoneMask jsInputReq" placeholder="Телефон" name="phone">
+											<input type="text" class="input__field jsInput jsPhoneMask jsInputReq" name="phone">
+											<span class="input__label">
+												Телефон
+											</span>
+											<span class="input__error">
+												Ошибка
+											</span>
 										</div>
-										<div class="input registration__input">
-											<input type="password" class="input__field jsInput jsInputReq jsInputPassword" placeholder="Придумайте пароль" name="password">
+										<div class="input input--l registration__input">
+											<input type="password" class="input__field jsInput jsInputReq jsInputPassword" name="password">
+											<span class="input__label">
+												Придумайте пароль
+											</span>
+											<span class="input__error">
+												Пароли не совпадают
+											</span>
 											<div class="input__icon is-show jsInputType">
 												<svg class="icon icon--show">
 													<use xlink:href="img/sprites/sprite.svg#show-usage"></use>
@@ -71,8 +89,14 @@
 												</svg>
 											</div>
 										</div>
-										<div class="input registration__input">
-											<input type="password" class="input__field jsInput jsInputReq jsInputPassword" placeholder="Повторите пароль" name="password-repeat">
+										<div class="input input--m registration__input">
+											<input type="password" class="input__field jsInput jsInputReq jsInputPassword" name="password-repeat">
+											<span class="input__label">
+												Повторите пароль
+											</span>
+											<span class="input__error">
+												Пароли не совпадают
+											</span>
 											<div class="input__icon is-show jsInputType">
 												<svg class="icon icon--show">
 													<use xlink:href="img/sprites/sprite.svg#show-usage"></use>
@@ -267,13 +291,13 @@
 					<div class="slider__navigation">
 						<div class="swiper-button-prev slider__button slider__button--prev">
 							<svg class="icon slider__button-icon">
-								<use xlink:href="img/sprites/sprite.svg#arrow-usage"></use>
+								<use xlink:href="img/sprites/sprite.svg#arrow-left-usage"></use>
 							</svg>
 						</div>
 						<div class="swiper-pagination slider__dots"></div>
 						<div class="swiper-button-next slider__button slider__button--next">
 							<svg class="icon slider__button-icon">
-								<use xlink:href="img/sprites/sprite.svg#arrow-usage"></use>
+								<use xlink:href="img/sprites/sprite.svg#arrow-right-usage"></use>
 							</svg>
 						</div>
 					</div>
@@ -285,11 +309,23 @@
 				</div>
 				<div class="modal__form jsForm">
 					<form action="#">
-						<div class="input input--inverted modal__form-input">
-							<input type="text" class="input__field jsInput jsInputReq" name="promocode" placeholder="Введите промокод">	
+						<div class="input modal__form-input">
+							<input type="text" class="input__field jsInput jsInputReq" name="promocode">	
+							<span class="input__label">
+								Введите промокод
+							</span>
+							<span class="input__error">
+								Ошибка
+							</span>
 						</div>
-						<div class="input input--phone input--inverted modal__form-input">
-							<input type="text" class="input__field jsInput jsPhoneMask jsInputReq" name="phone" placeholder="Номер телефона">	
+						<div class="input input--phone modal__form-input">
+							<input type="text" class="input__field jsInput jsPhoneMask jsInputReq" name="phone">	
+							<span class="input__label">
+								Введите номер
+							</span>
+							<span class="input__error">
+								Ошибка
+							</span>
 						</div>
 						<button type="submit" class="button modal__form-button jsFormSubmitButton">
 							<span class="button__text">
@@ -318,8 +354,14 @@
 				</div>
 				<div class="modal__form jsForm">
 					<form action="#">
-						<div class="input input--inverted modal__form-input">
-							<input type="text" class="input__field jsInput jsPhoneMask jsInputReq" name="phone" placeholder="Телефон">	
+						<div class="input modal__form-input">
+							<input type="text" class="input__field jsInput jsPhoneMask jsInputReq" name="phone">	
+							<span class="input__label">
+								Телефон
+							</span>
+							<span class="input__error">
+								Ошибка
+							</span>
 						</div>
 						<button type="submit" class="button modal__form-button jsFormSubmitButton"  data-bs-toggle="modal" data-bs-target="#modal-login-sms">
 							<span class="button__text">
@@ -357,7 +399,7 @@
 				</div>
 				<div class="modal__form jsForm">
 					<form action="#">
-						<div class="input input--inverted modal__form-input">
+						<div class="input modal__form-input">
 							<input type="text" class="input__field jsInput jsPhoneMask jsInputReq" name="phone" placeholder="Телефон" value="+79876543210" disabled>
 							<div class="input__icon input__icon--change" data-bs-toggle="modal" data-bs-target="#modal-login">
 								<svg class="icon">
@@ -365,8 +407,14 @@
 								</svg>
 							</div>
 						</div>
-						<div class="input input--inverted modal__form-input">
-							<input type="text" class="input__field jsInput jsInputReq" name="password" placeholder="Код из SMS">	
+						<div class="input modal__form-input">
+							<input type="text" class="input__field jsInput jsInputReq" name="password">
+							<span class="input__label">
+								Код из SMS
+							</span>
+							<span class="input__error">
+								Ошибка
+							</span>
 						</div>
 						<div class="modal-login__text modal-login__text--action">
 							<svg class="icon">
@@ -412,11 +460,23 @@
 				</div>
 				<div class="modal__form jsForm">
 					<form action="#">
-						<div class="input input--inverted modal__form-input">
-							<input type="email" class="input__field jsInput jsInputReq" name="email" placeholder="Введите e-mail">
+						<div class="input modal__form-input">
+							<input type="email" class="input__field jsInput jsInputReq" name="email">
+							<span class="input__label">
+								Введите e-mail
+							</span>
+							<span class="input__error">
+								Ошибка
+							</span>
 						</div>
-						<div class="input input--inverted modal__form-input">
-							<input type="password" class="input__field jsInput jsInputReq jsInputPassword" placeholder="Введите пароль" name="password">
+						<div class="input modal__form-input">
+							<input type="password" class="input__field jsInput jsInputReq jsInputPassword" name="password">
+							<span class="input__label">
+								Введите пароль
+							</span>
+							<span class="input__error">
+								Ошибка
+							</span>
 							<div class="input__icon is-show jsInputType">
 								<svg class="icon icon--show">
 									<use xlink:href="img/sprites/sprite.svg#show-usage"></use>
@@ -465,8 +525,14 @@
 				</div>
 				<div class="modal__form jsForm">
 					<form action="#">
-						<div class="input input--inverted modal__form-input">
-							<input type="email" class="input__field jsInput jsInputReq" name="phone" placeholder="Введите e-mail">	
+						<div class="input modal__form-input">
+							<input type="email" class="input__field jsInput jsInputReq" name="phone" placeholder="Введите e-mail">
+							<span class="input__label">
+								Введите e-mail
+							</span>
+							<span class="input__error">
+								Ошибка
+							</span>
 						</div>
 						<button type="submit" class="button modal__form-button jsFormSubmitButton">
 							<span class="button__text">
@@ -487,6 +553,303 @@
 		</div>
 	</div>
 </div>
+
+
+
+<div class="modal modal-login fade" id="modal-new-number" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg class="icon modal-close-icon">
+					<use xlink:href="img/sprites/sprite.svg#close-usage"></use>
+				</svg>
+			</button>
+			<div class="modal-login__block">
+				<div class="h2 modal-alert__title">
+					Изменение телефона
+				</div>
+				<div class="text modal-login__text">
+					Укажите новый номер и мы отравим СМС код для подтверждения изменения
+				</div>
+				<div class="modal__form jsForm">
+					<form action="#">
+						<div class="input modal__form-input">
+							<input type="text" class="input__field jsInput jsPhoneMask jsInputReq" name="phone">	
+							<span class="input__label">
+								Новый телефон
+							</span>
+							<span class="input__error">
+								Ошибка
+							</span>
+						</div>
+						<button type="submit" class="button modal__form-button jsFormSubmitButton" data-bs-toggle="modal" data-bs-target="#modal-change-number">
+							<span class="button__text">
+								Получить СМС код
+							</span>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-login fade" id="modal-change-number" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg class="icon modal-close-icon">
+					<use xlink:href="img/sprites/sprite.svg#close-usage"></use>
+				</svg>
+			</button>
+			<div class="modal-login__block">
+				<div class="h2 modal__title">
+					Изменение телефона
+				</div>
+				<div class="modal__form jsForm">
+					<form action="#">
+						<div class="input modal__form-input">
+							<input type="text" class="input__field jsInput jsPhoneMask jsInputReq" name="phone" placeholder="Телефон" value="+79876543210" disabled>
+							<div class="input__icon input__icon--change" data-bs-toggle="modal" data-bs-target="#modal-login">
+								<svg class="icon">
+									<use xlink:href="img/sprites/sprite.svg#change-usage"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="input modal__form-input">
+							<input type="text" class="input__field jsInput jsInputReq" name="password">
+							<span class="input__label">
+								Код из SMS
+							</span>
+							<span class="input__error">
+								Ошибка
+							</span>
+						</div>
+						<div class="modal-login__text modal-login__text--action">
+							<svg class="icon">
+								<use xlink:href="img/sprites/sprite.svg#again-usage"></use>
+							</svg>
+							<span>
+								Отправить код повторно
+							</span>
+						</div>
+						<button type="submit" class="button modal__form-button jsFormSubmitButton">
+							<span class="button__text">
+								Изменить номер
+							</span>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal modal-alert fade" id="modal-personal-alert" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg class="icon modal-close-icon">
+					<use xlink:href="img/sprites/sprite.svg#close-usage"></use>
+				</svg>
+			</button>
+			<img src="img/alert-triangle.svg" alt="" class="modal-alert__img">
+			<div class="modal-alert__title">
+				Внимание!
+			</div>
+			<div class="text modal-alert__text">
+				Для регистрации промокода и участия в акции должны быть заполнены личные данные, информация о клинике.
+			</div>
+			<a href="#" class="button modal-alert__button" data-bs-toggle="modal" data-bs-target="#modal-data">
+				<span class="button__text">
+					Заполнить профиль
+				</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal modal-qr-code fade" id="modal-qr-code" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg class="icon modal-close-icon">
+					<use xlink:href="img/sprites/sprite.svg#close-usage"></use>
+				</svg>
+			</button>
+			<img src="img/user/qr-code.svg" alt="" class="modal-qr-code__img">
+			<div class="text modal-qr-code__text">
+				Для получения приза, покажите промокод продавцу по адресу:
+			</div>
+			<div class="modal-qr-code__inf">
+				<a href="https://yandex.ru/maps/-/CCUFQHdvcB" target="_blank" class="modal-qr-code__inf-item">
+					<svg class="icon">
+						<use xlink:href="img/sprites/sprite.svg#pin-usage"></use>
+					</svg>
+					<span>
+						Санкт-Петербург, ул. Варшавская д.3 кор.2 офис.45
+					</span>
+				</a>
+				<a href="tel:8 (812) 564 43 33" class="modal-qr-code__inf-item">
+					<svg class="icon">
+						<use xlink:href="img/sprites/sprite.svg#phone-usage"></use>
+					</svg>
+					<span>
+						8 (812) 564 43 33
+					</span>
+				</a>
+				<div class="modal-qr-code__inf-item">
+					<svg class="icon">
+						<use xlink:href="img/sprites/sprite.svg#clock-usage"></use>
+					</svg>
+					<span>
+						Пн-Пт с 10:00 до 20:00
+					</span>
+				</div>
+			</div>
+			<a href="#" class="text text-medium link">
+				Хотите получить в другом месте?
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-data fade" id="modal-data" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content jsForm">
+			<button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg class="icon modal-close-icon">
+					<use xlink:href="img/sprites/sprite.svg#close-usage"></use>
+				</svg>
+			</button>
+			<form action="#">
+				<div class="modal-data__block is-active jsModalDataItem">
+					<div class="h2 modal-data__title">
+						Заполните личные данные
+					</div>
+					<div class="input modal-data__input">
+						<input type="text" class="input__field jsInput jsInputReq" name="name-1">	
+						<span class="input__label">
+							Фамилия
+						</span>
+						<span class="input__error">
+							Ошибка
+						</span>
+					</div>
+					<div class="input modal-data__input">
+						<input type="text" class="input__field jsInput jsInputReq" name="name-2">	
+						<span class="input__label">
+							Имя
+						</span>
+						<span class="input__error">
+							Ошибка
+						</span>
+					</div>
+					<div class="input modal-data__input">
+						<input type="text" class="input__field jsInput" name="name-3">	
+						<span class="input__label">
+							Отчество
+						</span>
+						<span class="input__error">
+							Ошибка
+						</span>
+					</div>
+					<div class="input modal-data__input">
+						<input type="text" class="input__field jsInput jsInputReq" name="mail">	
+						<span class="input__label">
+							Эл.почта
+						</span>
+						<span class="input__error">
+							Ошибка
+						</span>
+					</div>
+					<div class="input modal-data__input">
+						<input type="text" class="input__field jsInput" name="city">	
+						<span class="input__label">
+							Город
+						</span>
+						<span class="input__error">
+							Ошибка
+						</span>
+					</div>
+					<div class="modal-data__actions">
+						<div class="modal-data__number">
+							1/2
+						</div>
+						<button type="button" class="button jsModalDataNext">
+							<span class="button__text">
+								Дальше
+							</span>
+						</button>
+					</div>
+				</div>
+				<div class="modal-data__block jsModalDataItem">
+					<div class="h2 modal-data__title">
+						Укажите информацию о клинике
+					</div>
+					<div class="input modal-data__input">
+						<input type="text" class="input__field jsInput jsInputReq" name="post">	
+						<span class="input__label">
+							Занимаемая должность
+						</span>
+						<span class="input__error">
+							Ошибка
+						</span>
+					</div>
+					<div class="input modal-data__input">
+						<input type="text" class="input__field jsInput" name="clinic">	
+						<span class="input__label">
+							Название клиники
+						</span>
+						<span class="input__error">
+							Ошибка
+						</span>
+					</div>
+					<div class="input modal-data__input">
+						<input type="text" class="input__field jsInput" name="address">	
+						<span class="input__label">
+							Адрес клиники
+						</span>
+						<span class="input__error">
+							Ошибка
+						</span>
+					</div>
+					<div class="input modal-data__input">
+						<input type="text" class="input__field jsInput jsPhoneMask" name="phone">	
+						<span class="input__label">
+							Телефон клиники
+						</span>
+						<span class="input__error">
+							Ошибка
+						</span>
+					</div>
+					<div class="input modal-data__input">
+						<input type="text" class="input__field jsInput" name="region">	
+						<span class="input__label">
+							Регион
+						</span>
+						<span class="input__error">
+							Ошибка
+						</span>
+					</div>
+					<div class="modal-data__actions">
+						<a href="#" class="modal-data__number jsModalDataBack">
+							← 2/2
+						</a>
+						<button type="submit" class="button jsModalDataNext jsFormSubmitButton jsModalDataFinal">
+							<span class="button__text">
+								Завершить
+							</span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
 		<!-- modal  ends -->
 
 
